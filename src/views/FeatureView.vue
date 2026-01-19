@@ -1,3 +1,9 @@
+<script setup lang="ts">
+// 导入两个画廊组件
+import MapBackgroundGallery from '@/components/gallery/MapBackgroundGallery.vue'
+import ArtworkGridGallery from '@/components/gallery/ArtworkGridGallery.vue'
+</script>
+
 <template>
   <div class="feature-container">
     <!-- 页面标题 -->
@@ -13,9 +19,7 @@
         <p class="section-description">Hallownest 王国的各个区域拥有截然不同的视觉风格</p>
       </div>
       <!-- 轮播画廊将在这里显示 -->
-      <div class="placeholder-gallery">
-        <p>地图轮播画廊（组件待添加）</p>
-      </div>
+      <MapBackgroundGallery />
     </section>
     
     <!-- 美术设定展示区 -->
@@ -25,9 +29,7 @@
         <p class="section-description">角色设计、场景概念与视觉开发</p>
       </div>
       <!-- 网格画廊将在这里显示 -->
-      <div class="placeholder-gallery">
-        <p>美术网格画廊（组件待添加）</p>
-      </div>
+      <ArtworkGridGallery />
     </section>
     
     <!-- 设计理念文字区 -->
@@ -89,16 +91,6 @@
 .section-description {
   color: #a89575;
   font-size: 1rem;
-}
-
-.placeholder-gallery {
-  background: rgba(40, 35, 30, 0.6);
-  border-radius: 10px;
-  padding: 60px 20px;
-  border: 2px dashed #5d4d3a;
-  text-align: center;
-  color: #b8a488;
-  font-size: 1.1rem;
 }
 
 .design-concept {
