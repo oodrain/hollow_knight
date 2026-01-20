@@ -1,7 +1,6 @@
-<!-- Home.vue - 极简版 -->
 <template>
   <div class="home-page">
-    <PageTitle msg="空洞骑士" />
+    <PageTitle msg=" 图鉴" />
     
     <div class="minimal-nav-container">
       <RouterLink to="/npcandenemy" class="minimal-nav-item">
