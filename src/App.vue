@@ -12,7 +12,7 @@ import { RouterView } from 'vue-router'
     <RouterLink to="/">首页</RouterLink>
     <RouterLink to="/map">地图</RouterLink>
     <RouterLink to="/gallery">图鉴</RouterLink>
-    <RouterLink to="/story">剧情</RouterLink>
+    <RouterLink to="/story">世界观</RouterLink>
     <RouterLink to="/feature">美术</RouterLink>
   </nav>
   <main class="main-content">
