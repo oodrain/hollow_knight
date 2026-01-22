@@ -205,6 +205,7 @@ const onTrackEnded = () => {
 </script>
 
 <template>
+    
   <div class="feature-page">
     <PageTitle msg="美术与音乐" />
     

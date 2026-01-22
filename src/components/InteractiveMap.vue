@@ -1,10 +1,8 @@
 <template>
   <div class="map-page-wrapper">
     <div class="map-viewport">
-      <!-- 地图容器：始终在视窗中绝对居中 -->
       <div class="map-container">
         <img class="hk-map-image" :src="imageUrl" alt="Hollow Knight World Map" />
-        <!-- 透明的交互区域层，与地图完全重合 -->
         <div class="region-overlay">
           <div
             v-for="region in regions"
@@ -42,7 +40,6 @@ defineProps<{
   imageUrl: string
 }>()
 
-// 总地图尺寸，必须与背景图 hollow-knight-full-map.png 一致
 const MAP_WIDTH = 1068
 const MAP_HEIGHT = 695
 
@@ -101,7 +98,6 @@ const detailPosition = ref<{
 function getClipPathStyle(region: MapRegion) {
   const pixels = coordMap[region.id]
   if (!pixels || pixels.length < 6) {
-    // 未配置坐标时，不应用 clip-path，避免出现异常
     return {}
   }
 
@@ -114,7 +110,7 @@ function getClipPathStyle(region: MapRegion) {
     const yPercent = ((y / MAP_HEIGHT) * 100).toFixed(2)
     polygonString += `${xPercent}% ${yPercent}%, `
   }
-  // 移除最后的逗号和空格
+
   polygonString = polygonString.replace(/, $/, '')
 
   return {
@@ -124,7 +120,7 @@ function getClipPathStyle(region: MapRegion) {
 
 function handleRegionHover(region: MapRegion, event: MouseEvent) {
   activeRegion.value = region
-  // 详情框相对于视窗定位：在鼠标右下方 20px 处
+
   detailPosition.value = {
     left: `${event.clientX + 20}px`,
     top: `${event.clientY}px`,
@@ -157,21 +153,18 @@ function handleRegionLeave() {
 }
 
 .map-container {
-  position: relative; /* 为透明交互层建立定位上下文 */
-  /* 确保图片容器根据图片实际大小决定，不被撑满 */
+  position: relative;
   display: inline-block;
-  /* 将整张地图（图片 + 透明交互层）整体缩放为原来的 70% */
   transform: scale(0.7);
   transform-origin: top center;
 }
 
 .hk-map-image {
-  /* 保持原始比例，由外部容器缩放控制整体大小 */
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
-  display: block; /* 去除图片底部间隙 */
+  display: block;
 }
 
 .region-overlay {
@@ -180,7 +173,6 @@ function handleRegionLeave() {
   left: 0;
   width: 100%;
   height: 100%;
-  /* 整个覆盖层必须和背景图完全重合 */
 }
 
 .region-mask {
@@ -189,20 +181,18 @@ function handleRegionLeave() {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: transparent; /* 默认完全透明 */
+  background-color: transparent;
   cursor: pointer;
-  /* 核心：初始 clip-path 可被动态样式覆盖 */
   clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
-  /* 悬停时提供高亮反馈（可选） */
   transition: background-color 0.2s;
 }
 
 .region-mask:hover {
-  background-color: rgba(255, 215, 0, 0.15); /* 极淡的金色高亮，用于理解交互 */
+  background-color: rgba(255, 215, 0, 0.15); 
 }
 
 .floating-detail {
-  position: fixed; /* 关键 */
+  position: fixed; 
   z-index: 1000;
   background: rgba(26, 26, 46, 0.95);
   border: 1px solid #4a4a6d;
@@ -211,7 +201,7 @@ function handleRegionLeave() {
   max-width: 250px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   color: #e0e0e0;
-  pointer-events: none; /* 避免详情框本身干扰鼠标事件 */
+  pointer-events: none;
 }
 
 .floating-detail h3 {

@@ -331,9 +331,9 @@ const filteredSkills = (type) => {
   color: #e0e0e0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   padding: 20px;
-  margin: 0 auto; /* 保留居中，若后续局部内容需要约束，不影响整体 */
-  width: 100%; /* 保留：铺满父容器宽度 */
-  box-sizing: border-box; /* 保留：防止 padding 撑开宽度 */
+  margin: 0 auto; 
+  width: 100%; 
+  box-sizing: border-box; 
 }
 
 /* 页面标题 */

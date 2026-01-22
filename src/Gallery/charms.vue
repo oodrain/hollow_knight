@@ -58,16 +58,12 @@ const charmsData = ref([
   { id: 7, name: '冲刺大师', description: '有着被称为“冲刺大师”的古怪虫子形象。持有者将能够更频繁地冲刺，也能向下冲刺。非常适合那些想要快速移动的虫子。', spriteX: -600, spriteY: 0, notchCost: 2, type: '移动', location: '真菌荒地', owned: false },
   { id: 8, name: '飞毛腿', description: '有着被称为“飞毛腿”的古怪虫子形象。增加持有者的奔跑速度，使其能避开危险或追上敌人。', spriteX: -700, spriteY: 0, notchCost: 1, type: '移动', location: '真菌荒地', owned: false },
   { id: 9, name: '幼虫之歌', description: '包含被解救的幼虫的感激。受到伤害时获得灵魂。', spriteX: -800, spriteY: 0, notchCost: 1, type: '灵魂', location: '遗忘十字路', owned: true },
-  // Y=-100 行开始，跳过 (-200,-100)、(-500,-100)、(-800,-100)
   { id: 10, name: '蜕变挽歌', description: '包含将要步入生命的下一个阶段的幼虫的感激。为武器灌输神圣的力量。当持有者处于满血状态时，能从骨钉中射出白热能量束。', spriteX: 0, spriteY: -100, notchCost: 3, type: '攻击', location: '遗忘十字路', owned: false },
   { id: 11, name: '易碎心脏', description: '增加持有者的生命值，承受更多伤害。这个护符十分脆弱，如果它的持有者被杀死就会损坏。', spriteX: -100, spriteY: -100, notchCost: 2, type: '生命', location: '德特茅斯', owned: false },
-  // 跳过 (-200, -100)，直接到 -300
   { id: 12, name: '坚固心脏', description: '增加持有者的生命值，承受更多伤害。这个护符很坚固，不会破碎。', spriteX: -300, spriteY: -100, notchCost: 2, type: '生命', location: '德特茅斯', owned: false },
   { id: 13, name: '易碎贪婪', description: '使得持有者在击败敌人时能找到更多的吉欧。这个护符十分脆弱，如果它的持有者被杀死就会损坏。', spriteX: -400, spriteY: -100, notchCost: 2, type: '收集', location: '德特茅斯', owned: false },
-  // 跳过 (-500, -100)，直接到 -600
   { id: 14, name: '坚固贪婪', description: '使得持有者在击败敌人时能找到更多的吉欧。这个护符很坚固，不会破碎。', spriteX: -600, spriteY: -100, notchCost: 2, type: '收集', location: '德特茅斯', owned: false },
   { id: 15, name: '易碎力量', description: '增强持有者的攻击力，使其骨钉能够对敌人造成更多伤害。这个护符十分脆弱，如果它的持有者被杀死就会损坏。', spriteX: -700, spriteY: -100, notchCost: 3, type: '攻击', location: '德特茅斯', owned: false },
-  // 跳过 (-800, -100)，换行到 Y=-200 行首列 0
   { id: 16, name: '坚固力量', description: '增强持有者的攻击力，使其骨钉能够对敌人造成更多伤害。这个护符很坚固，不会破碎。', spriteX: 0, spriteY: -200, notchCost: 3, type: '攻击', location: '德特茅斯', owned: false },
   { id: 17, name: '法术扭曲者', description: '反映了灵魂圣所掌握灵魂力量的欲望，可以提高持有者的施法能力。减少法术的灵魂消耗。', spriteX: -100, spriteY: -200, notchCost: 2, type: '灵魂', location: '灵魂圣所', owned: false },
   { id: 18, name: '稳定之体', description: '防止持有者用骨钉劈砍敌人时产生后坐力。让人保持稳定，持续攻击。', spriteX: -200, spriteY: -200, notchCost: 1, type: '攻击', location: '水晶山峰', owned: false },
@@ -77,7 +73,6 @@ const charmsData = ref([
   { id: 22, name: '骄傲印记', description: '由螳螂部落慷慨赠予他们尊敬的人。大大增加持有者骨钉的攻击范围，使其能够从更远处劈砍敌人。', spriteX: -600, spriteY: -200, notchCost: 3, type: '攻击', location: '螳螂村', owned: false },
   { id: 23, name: '亡者之怒', description: '体现了那些将死之人的愤怒和英勇。当接近死亡时，持有者的力量会增加。', spriteX: -700, spriteY: -200, notchCost: 2, type: '攻击', location: '王国边缘', owned: false },
   { id: 24, name: '苦痛荆棘', description: '感受持有者的痛苦并鞭打周围的世界。当受到伤害时，产生荆棘藤蔓伤害附近的敌人。', spriteX: -800, spriteY: -200, notchCost: 1, type: '反击', location: '绿色小径', owned: true },
-  // Y=-300 行
   { id: 25, name: '巴德尔之壳', description: '在凝聚灵魂时，产生硬壳保护它的持有者。外壳不是无法破坏的，吸收太多的伤害后将会破碎。', spriteX: 0, spriteY: -300, notchCost: 2, type: '防御', location: '德特茅斯', owned: true },
   { id: 26, name: '吸虫之巢', description: '吸虫之母肠道诞生的活的护符。将复仇之魂法术变成一群不稳定的幼小吸虫。', spriteX: -100, spriteY: -300, notchCost: 3, type: '灵魂', location: '真菌荒地', owned: false },
   { id: 27, name: '防御者纹章', description: '圣巢国王赋予最忠诚的骑士的独特护符。虽然有些刮痕和污渍，但依旧保存得很好。让持有者散发出英勇的气息。', spriteX: -200, spriteY: -300, notchCost: 1, type: '防御', location: '雾之峡谷', owned: false },
@@ -87,7 +82,6 @@ const charmsData = ref([
   { id: 31, name: '生命血之心', description: '包含一个活着的核心，浸出宝贵的生命血。休息时，持有者被生命血包裹，可以防止少量伤害。', spriteX: -600, spriteY: -300, notchCost: 2, type: '生命', location: '古老盆地', owned: false },
   { id: 32, name: '生命血核心', description: '包含一个活着的核心，流出宝贵的生命血。休息时，持有者被生命血包裹，可以防止大量伤害。', spriteX: -700, spriteY: -300, notchCost: 3, type: '生命', location: '古老盆地', owned: false },
   { id: 33, name: '乔尼的祝福', description: '由仁慈的异教徒乔尼给予的祝福，将生命流体变成蓝色的生命血。持有者将拥有一个更健康的外壳，可以承受更多的伤害，但不能够通过凝聚灵魂自愈。', spriteX: -800, spriteY: -300, notchCost: 4, type: '生命', location: '王后花园', owned: false },
-  // Y=-400 行
   { id: 34, name: '蜂巢之血', description: '蜂巢中珍贵的金色硬化花蜜块。随时间修复持有者的伤口，使其回复生命值而不需凝聚灵魂。', spriteX: 0, spriteY: -400, notchCost: 4, type: '生命', location: '蜂巢', owned: false },
   { id: 35, name: '蘑菇孢子', description: '由活的真菌物质组成。当暴露于灵魂之下时，能散发出孢子。当凝聚灵魂时，发射孢子云，缓慢伤害敌人。', spriteX: -100, spriteY: -400, notchCost: 1, type: '毒系', location: '真菌荒地', owned: false },
   { id: 36, name: '锋利之影', description: '含有被禁用的法术，能将影子转换为致命的武器。当使用暗影冲刺时，持有者的身体会变得锋利，并伤害敌人。', spriteX: -200, spriteY: -400, notchCost: 2, type: '移动', location: '深渊', owned: false },

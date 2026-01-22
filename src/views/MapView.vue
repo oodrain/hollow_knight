@@ -128,7 +128,7 @@ const mapImageUrl = new URL('@/assets/map_image/hollow-knight-full-map.png', imp
 }
 
 .map-main-wrapper {
-  margin-top: 19px; /* “地图”标题和大地图之间留出适中的距离 */
+  margin-top: 19px; 
   flex: 1;
   width: 100%;
   display: flex;
