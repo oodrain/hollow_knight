@@ -1,6 +1,7 @@
+<!-- Home.vue - 极简版 -->
 <template>
   <div class="home-page">
-    <PageTitle msg=" 图鉴" />
+    <PageTitle msg="空洞骑士" />
     
     <div class="minimal-nav-container">
       <RouterLink to="/npcandenemy" class="minimal-nav-item">
@@ -48,6 +49,7 @@ import { RouterLink } from 'vue-router'
   padding: 20px;
 }
 
+/* 极简导航容器 */
 .minimal-nav-container {
   display: flex;
   justify-content: center;
@@ -57,6 +59,7 @@ import { RouterLink } from 'vue-router'
   flex-wrap: wrap;
 }
 
+/* 极简导航项 */
 .minimal-nav-item {
   display: flex;
   flex-direction: column;
@@ -65,6 +68,7 @@ import { RouterLink } from 'vue-router'
   width: 160px;
 }
 
+/* 极简导航图片 */
 .minimal-nav-image {
   background: #0A0A0A;
   width: 150px;

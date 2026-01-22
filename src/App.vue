@@ -2,7 +2,6 @@
 import { RouterView } from 'vue-router'
 import MouseTrail from '@/components/MouseTrail.vue'
 
-import MusicPlayer from '@/components/MusicPlayer.vue'
 </script>
 
 <template>
@@ -17,7 +16,7 @@ import MusicPlayer from '@/components/MusicPlayer.vue'
     <RouterLink to="/map">地图</RouterLink>
     <RouterLink to="/gallery">图鉴</RouterLink>
     <RouterLink to="/story">世界观</RouterLink>
-    <RouterLink to="/feature">美术</RouterLink>
+    <RouterLink to="/feature">美术与音乐</RouterLink>
   </nav>
   <main class="main-content">
   <RouterView />
