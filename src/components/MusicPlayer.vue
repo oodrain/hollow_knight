@@ -31,7 +31,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, onMounted, computed } from 'vue';
-import audioManager from '@/utils/audioManager';
+import audioManager from './src/utils/audioManager';
 
 const tracks = ref([
   { id: 'track1', name: '主旋律', src: '/music/track1.mp3' },
