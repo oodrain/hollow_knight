@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import MouseTrail from '@/components/MouseTrail.vue'
 
 </script>
 
 <template>
   <div>
+  <MouseTrail />
   <!-- 全站背景 -->
   <div id="app-bg"></div>
   <!--全站导航-->
