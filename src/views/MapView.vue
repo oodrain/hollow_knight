@@ -128,7 +128,7 @@ const mapImageUrl = new URL('@/assets/map_image/hollow-knight-full-map.png', imp
 }
 
 .map-main-wrapper {
-  margin-top: 19px; 
+  margin-top: 19px;
   flex: 1;
   width: 100%;
   display: flex;
